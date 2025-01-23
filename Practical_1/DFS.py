@@ -3,13 +3,13 @@ def dfs_recursive(graph, start, visited=None):
         visited = set()
     
     visited.add(start)
-    print(start, end=" ")  # Process the current node
+    print(start, end=" ")  
     
     for neighbor in graph[start]:
         if neighbor not in visited:
             dfs_recursive(graph, neighbor, visited)
 
-# Get graph input from the user
+
 def get_graph_input():
     graph = {}
     n = int(input("Enter the number of nodes in the graph: "))
@@ -21,7 +21,7 @@ def get_graph_input():
         graph[node] = neighbors
     return graph
 
-# Example usage
+
 if __name__ == "__main__":
     user_graph = get_graph_input()
     start_node = input("Enter the starting node: ")
